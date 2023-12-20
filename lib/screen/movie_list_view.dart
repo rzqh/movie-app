@@ -59,7 +59,9 @@ class _MovieListViewState extends State<MovieListView> {
                       onTap: () {
                         MaterialPageRoute route =
                             MaterialPageRoute(builder: (context) {
-                          return MovieDetail();
+                          return MovieDetail(
+                            selectedMovie: movies[position],
+                          );
                         });
                         Navigator.push(context, route);
                       },
