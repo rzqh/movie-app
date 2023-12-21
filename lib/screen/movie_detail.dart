@@ -23,21 +23,18 @@ class MovieDetail extends StatelessWidget {
           title: Text('${selectedMovie.title}'),
         ),
         body: SingleChildScrollView(
-          //menambahkan fitur scroll
-          child: Center(
-            //menempatkan widget di tengah
-            child: Column(
-              children: <Widget>[
-                Container(
-                  padding: EdgeInsets.all(16), //menambahkan padding
-                  height: screenHeight / 1.5,
-                  child: Image.network(path),
-                ),
-                Text('${selectedMovie.overview}'),
-              ],
-            )
-          )
-        )
-      );
+            //menambahkan fitur scroll
+            child: Center(
+                //menempatkan widget di tengah
+                child: Column(
+          children: <Widget>[
+            Container(
+              padding: const EdgeInsets.all(16), //menambahkan padding
+              height: screenHeight / 1.5,
+              child: Image.network(path),
+            ),
+            Text('${selectedMovie.overview}'),
+          ],
+        ))));
   }
 }

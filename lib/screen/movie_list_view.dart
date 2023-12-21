@@ -43,7 +43,7 @@ class _MovieListViewState extends State<MovieListView> {
     NetworkImage image;
     return Scaffold(
         appBar: AppBar(
-          title: Text('Daftar Film'),
+          title: const Text('Daftar Film'),
         ),
         body: ListView.builder(
             itemCount: moviesCount,
@@ -67,10 +67,8 @@ class _MovieListViewState extends State<MovieListView> {
                       },
                       title: Text(movies[position].title),
                       subtitle: Text(
-                        'Released: ' +
-                            movies[position].releaseDate +
-                            ' - vote: ' +
-                            movies[position].voteAverage.toString(),
+                        '${'Released: ' +
+                            movies[position].releaseDate} - vote: ${movies[position].voteAverage}',
                       )));
             }));
   }

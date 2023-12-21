@@ -22,7 +22,7 @@ class _MovieListState extends State<MovieList> {
     });
     return Scaffold(
       appBar: AppBar(
-        title: Text('Daftar Film'),
+        title: const Text('Daftar Film'),
       ),
       body: Text(result),
     );
