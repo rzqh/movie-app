@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 import '../model/movie.dart';
 
 class MovieDetail extends StatelessWidget {
-  final Movie selectedMovie;
   const MovieDetail({Key? key, required this.selectedMovie}) : super(key: key);
+
+  final Movie selectedMovie;
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +24,7 @@ class MovieDetail extends StatelessWidget {
             style: const TextStyle(
               color: Color(0xFFFFFFFF),
             )),
-        iconTheme: IconThemeData(color: Colors.white),    
+        iconTheme: const IconThemeData(color: Colors.white),    
         backgroundColor: Colors.blue,
       ),
       body: SingleChildScrollView(

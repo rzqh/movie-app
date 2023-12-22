@@ -125,7 +125,7 @@ class _MovieListViewState extends State<MovieListView> {
       ),
       appBar: AppBar(
         backgroundColor: Colors.blue,
-        iconTheme: IconThemeData(color: Colors.white),
+        iconTheme: const IconThemeData(color: Colors.white),
         title: titleBar,
         actions: [
           IconButton(

@@ -26,7 +26,7 @@ class _MovieListState extends State<MovieList> {
               style: TextStyle(
                 color: Color(0xFFFFFFFF),
               )),
-          iconTheme: IconThemeData(color: Colors.white),
+          iconTheme: const IconThemeData(color: Colors.white),
           backgroundColor: Colors.blue,
       ),
       body: Text(result),
