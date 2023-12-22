@@ -22,7 +22,12 @@ class _MovieListState extends State<MovieList> {
     });
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Daftar Film'),
+        title: const Text("Daftar Film",
+              style: TextStyle(
+                color: Color(0xFFFFFFFF),
+              )),
+          iconTheme: IconThemeData(color: Colors.white),
+          backgroundColor: Colors.blue,
       ),
       body: Text(result),
     );

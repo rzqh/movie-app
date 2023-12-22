@@ -12,7 +12,10 @@ class MovieListView extends StatefulWidget {
 
 class _MovieListViewState extends State<MovieListView> {
   Icon searchIcon = const Icon(Icons.search);
-  Widget titleBar = const Text('Daftar Film');
+  Widget titleBar = const Text('Daftar Film',
+   style: TextStyle(color: Colors.white),
+  );
+
 
   late int moviesCount;
   late List movies;
@@ -46,7 +49,9 @@ class _MovieListViewState extends State<MovieListView> {
       } else {
         setState(() {
           searchIcon = const Icon(Icons.search);
-          titleBar = const Text('Daftar Film');
+          titleBar = const Text('Daftar Film',
+           style: TextStyle(color: Colors.white),
+          );
         });
         defaultList();
       }
@@ -87,7 +92,8 @@ class _MovieListViewState extends State<MovieListView> {
                 Navigator.pop(context); //untuk menutup drawer
                 setState(() {
                   searchIcon = const Icon(Icons.search);
-                  titleBar = const Text('Daftar Film');
+                  titleBar = const Text('Daftar Film',                    
+                    style: TextStyle(color: Colors.white),);
                 });
                 defaultList(); //perintah getUpcoming()
               },
@@ -118,6 +124,8 @@ class _MovieListViewState extends State<MovieListView> {
         ),
       ),
       appBar: AppBar(
+        backgroundColor: Colors.blue,
+        iconTheme: IconThemeData(color: Colors.white),
         title: titleBar,
         actions: [
           IconButton(
@@ -156,10 +164,8 @@ class _MovieListViewState extends State<MovieListView> {
               ),
               title: Text(movies[position].title),
               subtitle: Text(
-                'Released: ' +
-                    movies[position].releaseDate +
-                    ' - Vote: ' +
-                    movies[position].voteAverage.toString(),
+                '${'Released: ' +
+                    movies[position].releaseDate} - Vote: ${movies[position].voteAverage}',
               ),
             ),
           );
@@ -168,3 +174,4 @@ class _MovieListViewState extends State<MovieListView> {
     );
   }
 }
+
