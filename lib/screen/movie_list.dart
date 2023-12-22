@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../komponen/http_helper.dart';
+import '../component/http_helper.dart';
 
 class MovieList extends StatefulWidget {
   const MovieList({Key? key}) : super(key: key);

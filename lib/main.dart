@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'screen/movie_list_view.dart';
 
-void main(){
+void main() {
   runApp(const MyApp());
 }
 
@@ -10,9 +10,12 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      title: 'MovieDB',
-      home: MovieListView()
+    return MaterialApp(
+      title: 'Flutter Demo',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: const MovieListView(),
     );
   }
 }
