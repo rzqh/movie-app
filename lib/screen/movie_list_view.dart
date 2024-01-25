@@ -11,7 +11,8 @@ class MovieListView extends StatefulWidget {
 
 class _MovieListViewState extends State<MovieListView> {
   Icon searchIcon = const Icon(Icons.search);
-  Widget titleBar = const Text('Daftar Film');
+  Widget titleBar =
+      const Text('Daftar Film', style: TextStyle(color: Colors.white));
 
   late int moviesCount;
   late List movies;
@@ -45,7 +46,8 @@ class _MovieListViewState extends State<MovieListView> {
       } else {
         setState(() {
           searchIcon = const Icon(Icons.search);
-          titleBar = const Text('Daftar Film');
+          titleBar =
+              const Text('Daftar Film', style: TextStyle(color: Colors.white));
         });
         defaultList();
       }
@@ -97,7 +99,8 @@ class _MovieListViewState extends State<MovieListView> {
                 Navigator.pop(context);
                 setState(() {
                   searchIcon = const Icon(Icons.search);
-                  titleBar = const Text('Film Rating Tertinggi');
+                  titleBar = const Text('Film Rating Tertinggi',
+                      style: TextStyle(color: Colors.white));
                 });
                 topRatedList();
               },
@@ -108,7 +111,8 @@ class _MovieListViewState extends State<MovieListView> {
                 Navigator.pop(context);
                 setState(() {
                   searchIcon = const Icon(Icons.search);
-                  titleBar = const Text('Daftar Film');
+                  titleBar = const Text('Daftar Film',
+                      style: TextStyle(color: Colors.white));
                 });
                 defaultList();
               },
@@ -140,12 +144,16 @@ class _MovieListViewState extends State<MovieListView> {
       ),
       appBar: AppBar(
         title: titleBar,
+        backgroundColor: Colors.blue,
         actions: [
           IconButton(
             icon: searchIcon,
             onPressed: toggleSearch,
           ),
         ],
+        iconTheme: const IconThemeData(
+          color: Colors.white, // Ganti warna ikon di sini
+        ),
       ),
       body: ListView.builder(
         itemCount: moviesCount,

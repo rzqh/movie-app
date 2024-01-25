@@ -25,7 +25,12 @@ class MovieDetail extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text('${selectedMovie.title}'),
+        title: Text('${selectedMovie.title}',
+            style: TextStyle(color: Colors.white)),
+        backgroundColor: Colors.blue,
+        iconTheme: const IconThemeData(
+          color: Colors.white, // Ganti warna ikon di sini
+        ),
       ),
       body: SingleChildScrollView(
         child: Center(
